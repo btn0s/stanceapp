@@ -9,27 +9,27 @@
 6.	Self-employment Income
 -->
 
-<div>
+<div class="container">
   <form role="form">
     <div class="form-group">
-      <input id="employmentIncome" type="integer" placeholder="Employment Income" class="form-control">
+      <input id="employmentIncome" type="number" placeholder="Employment Income" class="form-control">
     </div>
     <div class="form-group">
-      <input id="nonemploymentIncome" type="integer" placeholder="Non-employment Income" class="form-control">
+      <input id="nonemploymentIncome" type="number" placeholder="Non-employment Income" class="form-control">
     </div>
     <div>
-      <input id="investmentIncome" type="interger" placeholder="Investment Income" class="form-control">
+      <input id="investmentIncome" type="number" placeholder="Investment Income" class="form-control">
     </div>
     <div>
-      <input id="rentIncome" type="interger" placeholder="Rent Income" class="form-control">
+      <input id="rentIncome" type="number" placeholder="Rent Income" class="form-control">
     </div>
     <div>
-      <input id="hobbyIncome" type="interger" placeholder="Hobby Income" class="form-control">
+      <input id="hobbyIncome" type="number" placeholder="Hobby Income" class="form-control">
     </div>
     <div>
-      <input id="selfemploymentIncome" type="interger" placeholder="Self-employment Income" class="form-control">
+      <input id="selfemploymentIncome" type="number" placeholder="Self-employment Income" class="form-control">
     </div>
-    <button type="submit" class="btn btn-success">How am I doing?</button>
+    <button type="submit" class="button success">How am I doing?</button>
   </form>
 </div>
 
@@ -44,31 +44,35 @@
 7.     Cash
 -->
 
-<div>
+<div class="container">
   <form role="form">
-    <div class="form-group">
-      <h4>How many bank accounts do you have?</h4>
-      <input id="bankAccounts" type="number" placeholder="1" class="form-control">
-    </div>
-    <div class="form-group">
-      <h4>How many Investment accounts do you have?</h4>
-      <input id="investmentAccounts" type="number" placeholder="1" class="form-control">
-    </div>
-    <div class="form-group">
-      <h4>Do you own any annuities? (leave blank if not)</h4>
-      <input id="annuities" type="checkbox" class="form-control">
-    </div>
-    <div class="form-group">
-      <h4>How many cash equivalent policies do you have?</h4>
-      <input id="cashEquivalentPolicies" type="number" placeholder="1" class="form-control">
-    </div>
-    <div class="form-group">
-      <h4>How much money do you owe?</h4>
-      <input id="moniesOwed" type="integer" placeholder="$0.00" class="form-control">
-    </div>
-    <div class="form-group">
-      <h4>How much cash do you have?</h4>
-      <input id="cash" type="integer" placeholder="$0.00" class="form-control">
+    <div class="row collapse">
+      <div class="small-12 columns">
+        <label>
+          <h4>How many bank accounts do you have?</h4>
+          <input id="bankAccounts" type="number" placeholder="1" class="form-control">
+        </label>
+      </div>
+      <div class="small-12 columns">
+        <h4>How many Investment accounts do you have?</h4>
+        <input id="investmentAccounts" type="number" placeholder="1" class="form-control">
+      </div>
+      <div class="small-12 columns">
+        <h4>Do you own any annuities? (leave blank if not)</h4>
+        <input id="annuities" type="checkbox" class="form-control">
+      </div>
+      <div class="small-12 columns">
+        <h4>How many cash equivalent policies do you have?</h4>
+        <input id="cashEquivalentPolicies" type="number" placeholder="1" class="form-control">
+      </div>
+      <div class="small-12 columns">
+        <h4>How much money do you owe?</h4>
+        <input id="moniesOwed" type="number" placeholder="$0.00" class="form-control">
+      </div>
+      <div class="small-12 columns">
+        <h4>How much cash do you have?</h4>
+        <input id="cash" type="number" placeholder="$0.00" class="form-control">
+      </div>
     </div>
   </form>
 </div>
@@ -83,31 +87,33 @@
 6.     Business
 -->
 
-<div>
+<div class="container">
   <form role="form">
-    <div class="form-group">
-      <h4>What is the approximate value of your owned real estate?</h4>
-      <input id="realEstate" type="integer" placeholder="real estate market value" class="form-control">
-    </div>
-    <div>
-      <h4>What is the approximate value of the cars you own?</h4>
-      <input id="cars" type="interger" placeholder="Value of your cars" class="form-control">
-    </div>
-    <div>
-      <h4>What is the approximate value of the jewelry you own?</h4>
-      <input id="jewelry" type="interger" placeholder="Value of your jewelry" class="form-control">
-    </div>
-    <div>
-      <h4>What is the approximate value of the precious metals you own?</h4>
-      <input id="preciousMetals" type="interger" placeholder="Value of your precious metals" class="form-control">
-    </div>
-    <div>
-      <h4>What is the approximate value of the paintings you own?</h4>
-      <input id="paintings" type="interger" placeholder="Approximate value of artworks" class="form-control">
-    </div>
-    <div>
-      <h4>What is the approximate value of the precious metals you own?</h4>
-      <input id="preciousMetals" type="interger" placeholder="Value of your precious metals" class="form-control">
+    <div class="row collapse">
+      <div class="small-12 columns">
+        <h4>What is the approximate value of your owned real estate?</h4>
+        <input id="realEstate" type="number" placeholder="real estate market value" class="form-control">
+      </div>
+      <div class="small-12 columns">
+        <h4>What is the approximate value of the cars you own?</h4>
+        <input id="cars" type="number" placeholder="Value of your cars" class="form-control">
+      </div>
+      <div class="small-12 columns">
+        <h4>What is the approximate value of the jewelry you own?</h4>
+        <input id="jewelry" type="number" placeholder="Value of your jewelry" class="form-control">
+      </div>
+      <div class="small-12 columns">
+        <h4>What is the approximate value of the precious metals you own?</h4>
+        <input id="preciousMetals" type="number" placeholder="Value of your precious metals" class="form-control">
+      </div>
+      <div class="small-12 columns">
+        <h4>What is the approximate value of the paintings you own?</h4>
+        <input id="paintings" type="number" placeholder="Approximate value of artworks" class="form-control">
+      </div>
+      <div class="small-12 columns">
+        <h4>What is the approximate value of the precious metals you own?</h4>
+        <input id="preciousMetals" type="number" placeholder="Value of your precious metals" class="form-control">
+      </div>
     </div>
   </form>
 </div>
