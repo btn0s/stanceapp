@@ -8,7 +8,7 @@
     <form role="form">
       <div class="small-12 columns">
         <label>First Name
-          <input type="text" id="firstName"/>
+          <input type="text" id="firstName" autofocus/>
         </label>
         <label>Last Name
           <input type="text" id="lastName"/>
@@ -56,38 +56,85 @@
             </select>
           </label>
           <label>Total Esitmated Income
-            <input type="number" id="incomeTotal1" />
+            <input type="text" id="incomeTotal1" />
           </label>
         </div>
       </div>
       <hr />
       <div class="small-12 columns">
         <label>Expenses
-          <input type="number" id="expenses" />
+          <input type="text" id="expenses" />
         </label>
+        <label>Expense Type
+          <select id="incomeType">
+            <option value="household">Household</option>
+            <option value="living">Living</option>
+            <option value="shopping">Shopping</option>
+            <option value="auto">Auto</option>
+            <option value="legal">Legal</option>
+            <option value="professional_services">Professional Services</option>
+            <option value="medical">Medical</option>
+          </select>
+        </label>
+        <div class="expense-details" id="household_details">
+
+        </div>
+        <div class="expense-details" id="living_details">
+
+        </div>
+        <div class="expense-details" id="shopping_details">
+
+        </div>
+        <div class="expense-details" id="auto_details">
+
+        </div>
+        <div class="expense-details" id="legal_details">
+
+        </div>
+        <div class="expense-details" id="professional-services_details">
+
+        </div>
+        <div class="expense-details" id="medical_details">
+
+        </div>
       </div>
       <hr />
       <div class="small-12 columns">
         <label>Debt
-          <input type="number" id="debt" />
+          <input type="text" id="debt" />
         </label>
       </div>
       <hr />
       <div class="small-12 columns">
         <label>Liquid Assets
-          <input type="number" id="liquidAssets" />
+          <input type="text" id="liquidAssets" />
+        </label>
+        <label>Asset Type
+          <select id="incomeType">
+            <option value="investmentAccounts">Investment Acts</option>
+            <option value="bankAccounts">Bank Accounts</option>
+            <option value="annuities">Annuities</option>
+            <option value="moniesOwed">Money Owed</option>
+            <option value="cash">Cash</option>
+          </select>
+        </label>
+        <label>Is this asset taxable?
+          <input type="checkbox" id="liquidTaxable">
+        </label>
+        <label>Purchase Value
+          <input type="text" id="purchaseValue"
         </label>
       </div>
       <hr />
       <div class="small-12 columns">
         <label>Non-liquid Assets
-          <input type="number" id="nonLiquidAssets" />
+          <input type="text" id="nonLiquidAssets" />
         </label>
       </div>
       <hr />
       <div class="small-12 columns">
         <label>Family
-          <input type="number" id="family" />
+          <input type="text" id="family" />
         </label>
       </div>
     </form>

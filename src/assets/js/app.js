@@ -11,12 +11,12 @@
         6.	Self-employment Income
     */
 
-// var employment_Income = document.getElementById("employmentIncome");
-// var nonemployment_Income = document.getElementById("nonemploymentIncome");
-// var investment_Income = document.getElementById("investmentIncome");
-// var rent_Income = document.getElementById("rentIncome");
-// var hobby_Income = document.getElementById("hobbyIncome");
-// var selfemployment_Income = document.getElementById("selfemploymentIncome");
+// var employment_Income = $("employmentIncome");
+// var nonemployment_Income = $("nonemploymentIncome");
+// var investment_Income = $("investmentIncome");
+// var rent_Income = $("rentIncome");
+// var hobby_Income = $("hobbyIncome");
+// var selfemployment_Income = $("selfemploymentIncome");
 
 var income = {};
 
@@ -31,46 +31,37 @@ var income = {};
         7.	Cash
     */
 
-// var bank_Accounts = document.getElementById('bankAccounts');
-// var investment_Accounts = document.getElementById('investmentAccounts');
-// var annuities = document.getElementById('annuities');
-// var cash_Equivalent_Policies = document.getElementById('cashEquivalentPolicies');
-// var monies_Owed = document.getElementById('moniesOwed');
-// var cash = document.getElementById('cash');
+// var bank_Accounts = $('bankAccounts');
+// var investment_Accounts = $('investmentAccounts');
+// var annuities = $('annuities');
+// var cash_Equivalent_Policies = $('cashEquivalentPolicies');
+// var monies_Owed = $('moniesOwed');
+// var cash = $('cash');
 
 
 // User Basic Info
-var firstName = document.getElementById('firstName').value;
-var lastName = document.getElementById('lastName').value;
-var age = document.getElementById('age').value;
-var gender = document.getElementById('gender').value;
-var address = document.getElementById('address').value;
-var city = document.getElementById('city').value;
-var state = document.getElementById('state').value;
-var zip = document.getElementById('zip').value;
+var firstName;
+var lastName;
+var age;
+var gender;
+var address;
+var city;
+var state;
+var zip;
 
-var user = {
-  firstName: firstName,
-  lastName: lastName,
-  age: age,
-  gender: gender,
-  address: address,
-  city: city,
-  state: state,
-  zip: zip
-};
+var user = {};
 
 // Income Info
-var incomeType = document.getElementById('incomeType');
-var incomeTotal = document.getElementById('incomeTotal');
+var incomeType;
+var incomeTotal;
 
 var income = {};
 
 // Expense Info
-var expenses = document.getElementById('expenses');
+var expenses;
 
 // Debt Info
-var debt = document.getElementById('debt');
+var debt;
 
 // Asset Info
 
@@ -84,14 +75,14 @@ var family = {};
 // Store data.
 function storeInputData() {
   // User Basic Info
-  var firstName = document.getElementById('firstName').value;
-  var lastName = document.getElementById('lastName').value;
-  var age = document.getElementById('age').value;
-  var gender = document.getElementById('gender').value;
-  var address = document.getElementById('address').value;
-  var city = document.getElementById('city').value;
-  var state = document.getElementById('state').value;
-  var zip = document.getElementById('zip').value;
+  var firstName = $('#firstName').val();
+  var lastName = $('#lastName').val();
+  var age = $('#age').val();
+  var gender = $('#gender').val();
+  var address = $('#address').val();
+  var city = $('#city').val();
+  var state = $('#state').val();
+  var zip = $('#zip').val();
 
   var user = {
     firstName: firstName,
@@ -105,16 +96,16 @@ function storeInputData() {
   };
 
   // Income Info
-  var incomeType = document.getElementById('incomeType').value;
-  var incomeTotal = document.getElementById('incomeTotal').value;
+  var incomeType = $('#incomeType').val();
+  var incomeTotal = $('#incomeTotal').val();
 
   var income = {};
 
   // Expense Info
-  var expenses = document.getElementById('expenses').value;
+  var expenses = $('#expenses').val();
 
   // Debt Info
-  var debt = document.getElementById('debt').value;
+  var debt = $('#debt').val();
 
   // Asset Info
 
@@ -132,10 +123,19 @@ window.onload = function() {
   init();
 };
 
-// Update when user changes input data.
-document.getElementById('submit').addEventListener('click', function() {
-  storeInputData();
-}, false);
+$(document).ready(function() {
+  // Update when user changes input data.
+  $('#submit').click(function() {
+    storeInputData();
+  });
+
+  // Update when user makes changes.
+  $('input').on( 'blur', function() {
+    storeInputData();
+
+    console.log(firstName);
+  });
+});
 
 //GLOBAL NAMESPACE
 
