@@ -6,6 +6,8 @@
   </div>
   <div class="stanceapp-form__form">
     <form role="form">
+
+      <!-- User Info -->
       <div class="small-12 columns">
         <label>First Name
           <input type="text" id="firstName" autofocus/>
@@ -36,106 +38,524 @@
           <input type="text" id="zip" />
         </label>
       </div>
+
+
       <hr />
+
+      <!-- Income Info -->
       <div class="small-12 columns">
+        <h4>Income</h4>
         <label>Estimated Income
-          <input type="text" id="income"/>
+          <input type="text" id="income" />
         </label>
-        <div class="income-details">
-          <label>Income Type
-            <select id="incomeType">
-              <option value="employmentIncome">Employment Income</option>
-              <option value="nonEmploymentIncome">Non-employment Income</option>
-              <option value="investmentIncome">Investment Income</option>
-              <option value="rentIncome">Rent Income</option>
-              <option value="hobbyIncome">Hobby Income</option>
-              <option value="selfEmploymentIncome">Self-employment Income</option>
-              <option value="socialSecurity">Social Security</option>
-              <option value="alimony">Alimony</option>
-              <option value="federalSupport">Federal Support</option>
-            </select>
-          </label>
-          <label>Total Esitmated Income
-            <input type="text" id="incomeTotal1" />
-          </label>
+
+        <!-- Opens adjacent '__wrapper' -->
+        <button class="button moreDetails" data-opens="income__wrapper">More Details</button>
+
+        <!-- Wrapper for individual 'income' objects -->
+        <div class="income__wrapper">
+
+          <!--
+          Income Object -
+            1. Income Type
+            2. Estimated Total
+          -->
+          <div class="income" id="income_1">
+            <label>Income Type
+              <select class="income__type">
+                <option value="employmentIncome">Employment Income</option>
+                <option value="nonEmploymentIncome">Non-employment Income</option>
+                <option value="investmentIncome">Investment Income</option>
+                <option value="rentIncome">Rent Income</option>
+                <option value="hobbyIncome">Hobby Income</option>
+                <option value="selfEmploymentIncome">Self-employment Income</option>
+                <option value="socialSecurity">Social Security</option>
+                <option value="alimony">Alimony</option>
+                <option value="federalSupport">Federal Support</option>
+              </select>
+            </label>
+            <label>Total Esitmated Income
+              <input type="text" class="income__total"/>
+            </label>
+          </div>
+          <!-- end object -->
+
+          <!--
+          <div class="income" id="income_2">
+            <label>Income Type
+              <select class="income__type">
+                <option value="employmentIncome">Employment Income</option>
+                <option value="nonEmploymentIncome">Non-employment Income</option>
+                <option value="investmentIncome">Investment Income</option>
+                <option value="rentIncome">Rent Income</option>
+                <option value="hobbyIncome">Hobby Income</option>
+                <option value="selfEmploymentIncome">Self-employment Income</option>
+                <option value="socialSecurity">Social Security</option>
+                <option value="alimony">Alimony</option>
+                <option value="federalSupport">Federal Support</option>
+              </select>
+            </label>
+            <label>Total Esitmated Income
+              <input type="text" class="income__total"/>
+            </label>
+          </div>
+          -->
+          <!-- and so on... -->
+
+        </div>
+
+        <!-- Generate new Income Object into '__wrapper' above -->
+        <button class="button addNew" data-addNew="income">Add Another Income</button>
+
+      </div>
+
+
+      <hr />
+
+      <!-- Expense Info -->
+      <div class="small-12 columns">
+        <h4>Expenses</h4>
+        <label>Total Expenses Per Month
+          <input type="text" id="monthlyExpenses" />
+        </label>
+        <label>Total Expenses Per Year
+          <input type="text" id="yearlyExpenses" />
+        </label>
+
+        <button class="button moreDetails" data-opens="expenses__wrapper">More Details</button>
+
+        <div class="expenses__wrapper">
+
+          <div class="expense" id="household">
+            <h5>Household</h5>
+            <label>Estimated Household
+              <input type="text" id="householdTotal" />
+            </label>
+            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
+            <div class="expense__details__wrapper">
+              <label>Utilities
+                <input type="text" id="household_utilities"/>
+              </label>
+              <label>Maintenance
+                <input type="text" id="household_maintenance"/>
+              </label>
+              <label>Insurance
+                <input type="text" id="household_insurace"/>
+              </label>
+              <label>Community Fees
+                <input type="text" id="household_communityFees"/>
+              </label>
+              <label>Rent
+                <input type="text" id="household_rent"/>
+              </label>
+              <label>Property Taxes
+                <input type="text" id="household_propertyTaxes"/>
+              </label>
+            </div>
+          </div>
+          <div class="expense" id="living">
+            <h5>Living</h5>
+            <label>Estimated Living
+              <input type="text" id="livingTotal" />
+            </label>
+            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
+            <div class="expense__details__wrapper">
+              <label>Groceries
+                <input type="text" id="living_groceries"/>
+              </label>
+              <label>Dining Out
+                <input type="text" id="living_diningOut"/>
+              </label>
+              <label>Entertainment
+                <input type="text" id="living_entertainment"/>
+              </label>
+              <label>Personal Care
+                <input type="text" id="living_personalCare"/>
+              </label>
+              <label>Gym
+                <input type="text" id="living_gym"/>
+              </label>
+              <label>Sporting Activities
+                <input type="text" id="living_sportingActivities"/>
+              </label>
+              <label>Subscriptions
+                <input type="text" id="living_subscriptions"/>
+              </label>
+              <label>Memberships
+                <input type="text" id="living_memberships"/>
+              </label>
+              <label>Charity
+                <input type="text" id="living_charity"/>
+              </label>
+              <label>Travel
+                <input type="text" id="living_travel"/>
+              </label>
+            </div>
+          </div>
+          <div class="expense" id="shopping">
+            <h5>Shopping</h5>
+            <label>Estimated Shopping
+              <input type="text" id="shoppingTotal" />
+            </label>
+            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
+            <div class="expense__details__wrapper">
+              <label>Clothing
+                <input type="text" id="shopping_clothing"/>
+              </label>
+              <label>Electronics
+                <input type="text" id="shopping_electronics"/>
+              </label>
+              <label>Entertainment
+                <input type="text" id="shopping_entertainment"/>
+              </label>
+              <label>Software
+                <input type="text" id="shopping_software"/>
+              </label>
+              <label>Appliances
+                <input type="text" id="shopping_appliances"/>
+              </label>
+              <label>Equipment
+                <input type="text" id="shopping_equipment"/>
+              </label>
+              <label>Hobbies
+                <input type="text" id="shopping_hobbies"/>
+              </label>
+              <label>Readings
+                <input type="text" id="shopping_readings"/>
+              </label>
+              <label>Toys
+                <input type="text" id="shopping_toys"/>
+              </label>
+              <label>Music/Videos
+                <input type="text" id="shopping_musicVideos"/>
+              </label>
+              <label>Art
+                <input type="text" id="shopping_art"/>
+              </label>
+              <label>Jewelery
+                <input type="text" id="shopping_jewelery"/>
+              </label>
+            </div>
+          </div>
+          <div class="expense" id="auto">
+            <h5>Auto</h5>
+            <label>Estimated Auto
+              <input type="text" id="autoTotal" />
+            </label>
+            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
+            <div class="expense__details__wrapper">
+              <label>Insurance
+                <input type="text" id="auto_insurance"/>
+              </label>
+              <label>Fuel
+                <input type="text" id="auto_fuel"/>
+              </label>
+              <label>Taxes
+                <input type="text" id="auto_taxes"/>
+              </label>
+              <label>Maintenance
+                <input type="text" id="auto_maintenance"/>
+              </label>
+              <label>Parking
+                <input type="text" id="auto_parking"/>
+              </label>
+              <label>Tolls
+                <input type="text" id="auto_tolls"/>
+              </label>
+            </div>
+          </div>
+          <div class="expense" id="legal">
+            <h5>Legal</h5>
+            <label>Estimated Legal
+              <input type="text" id="legalTotal" />
+            </label>
+            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
+            <div class="expense__details__wrapper">
+              <label>Alimony
+                <input type="text" id="legal_alimony" />
+              </label>
+              <label>Childcare
+                <input type="text" id="legal_childcare" />
+              </label>
+              <label>Garnishments
+                <input type="text" id="legal_garnishments" />
+              </label>
+            </div>
+          </div>
+          <div class="expense" id="professionalServices">
+            <h5>Professional Services</h5>
+            <label>Estimated Professional Services
+              <input type="text" id="professionalServicesTotal" />
+            </label>
+            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
+            <div class="expense__details__wrapper">
+              <label>Legal
+                <input type="text" id="professionalServices_legal"/>
+              </label>
+              <label>Accounting
+                <input type="text" id="professionalServices_accounting"/>
+              </label>
+              <label>Financial
+                <input type="text" id="professionalServices_financial"/>
+              </label>
+            </div>
+          </div>
+          <div class="expense" id="medical">
+            <h5>Medical</h5>
+            <label>Estimated Medical
+              <input type="text" id="medicalTotal" />
+            </label>
+            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
+            <div class="expense__details__wrapper">
+              <label>Doctor
+                <input type="text" id="medical_doctor"/>
+              </label>
+              <label>Dental
+                <input type="text" id="medical_dental"/>
+              </label>
+              <label>Vision
+                <input type="text" id="medical_vision"/>
+              </label>
+              <label>Medicare
+                <input type="text" id="medical_medicare"/>
+              </label>
+              <label>Disability
+                <input type="text" id="medical_disability"/>
+              </label>
+              <label>Life Insurance
+                <input type="text" id="medical_lifeInsurance"/>
+              </label>
+            </div>
+          </div>
+
         </div>
       </div>
+
+
       <hr />
+
+
       <div class="small-12 columns">
-        <label>Expenses
-          <input type="text" id="expenses" />
+        <h4>Debt</h4>
+        <label>Are you in any form of debt?
+          <input type="checkbox" id="inDebt"/>
         </label>
-        <label>Expense Type
-          <select id="incomeType">
-            <option value="household">Household</option>
-            <option value="living">Living</option>
-            <option value="shopping">Shopping</option>
-            <option value="auto">Auto</option>
-            <option value="legal">Legal</option>
-            <option value="professional_services">Professional Services</option>
-            <option value="medical">Medical</option>
-          </select>
-        </label>
-        <div class="expense-details" id="household_details">
-
-        </div>
-        <div class="expense-details" id="living_details">
-
-        </div>
-        <div class="expense-details" id="shopping_details">
-
-        </div>
-        <div class="expense-details" id="auto_details">
-
-        </div>
-        <div class="expense-details" id="legal_details">
-
-        </div>
-        <div class="expense-details" id="professional-services_details">
-
-        </div>
-        <div class="expense-details" id="medical_details">
-
-        </div>
-      </div>
-      <hr />
-      <div class="small-12 columns">
-        <label>Debt
+        <label>Total Estimated Debt
           <input type="text" id="debt" />
         </label>
+
+        <button class="button moreDetails" data-opens="debt__wrapper">More Details</button>
+
+        <div class="debt__wrapper">
+
+          <!-- Debt Object -->
+          <div class="debt" id="debt1">
+            <label>Debt Type
+              <select class="debt__type">
+                <option value="mortgageRent">Mortgage / Rent</option>
+                <option value="equityLoans">Equity Loans</option>
+                <option value="carLoans">Car Loans / Lease</option>
+                <option value="creditCards">Credit Cards</option>
+                <option value="studentLoans">Student Loans</option>
+                <option value="personalLoans">Personal Loans</option>
+                <option value="otherDebt">Other</option>
+              </select>
+            </label>
+            <label>Estimated Loan Total
+              <input type="text" class="debt__total" />
+            </label>
+
+            <button class="button moreDetails" data-opens="debt__details__wrapper">More Details</button>
+
+            <div class="debt__details__wrapper">
+
+              <div class="debt__details">
+                <label>Account Name
+                  <input type="text" class="accountName"/>
+                </label>
+                <label>Account Number
+                  <input type="text" class="accountNumber"/>
+                </label>
+                <label>Account Open Date
+                  <input type="text" class="openDateMonth"/>
+                  <input type="text" class="openDateDay"/>
+                  <input type="text" class="openDateYear"/>
+                </label>
+                <label>Account Close Date
+                  <input type="text" class="closeDateMonth"/>
+                  <input type="text" class="closeDateDay"/>
+                  <input type="text" class="closeDateYear"/>
+                </label>
+                <label>APR (Interest Rate)
+                  <input type="text" class="apr"/>
+                </label>
+                <label>Status
+                  <select>
+                    <option value="active">Active</option>
+                    <option value="closed">Closed</option>
+                    <option value="settled">Settled</option>
+                    <option value="disputed">Disputed</option>
+                    <option value="collections">Collections</option>
+                  </select>
+                </label>
+                <label>Loan Term
+                  <input type="text" class="loanTerm"/>
+                </label>
+                <label>Annual Fees
+                  <input type="text" class="annualFees"/>
+                </label>
+                <label>Current Balance
+                  <input type="text" class="currentBalance"/>
+                </label>
+              </div>
+
+            </div>
+            <!-- end object -->
+
+          </div>
+
+          <button class="button addNew" data-addNew="debt">I have another source of debt.</button>
+
+        </div>
       </div>
+
+
       <hr />
+
+
       <div class="small-12 columns">
-        <label>Liquid Assets
+        <h4>Liquid Assets</h4>
+        <label>Total Liquid Assets
           <input type="text" id="liquidAssets" />
         </label>
-        <label>Asset Type
-          <select id="incomeType">
-            <option value="investmentAccounts">Investment Acts</option>
-            <option value="bankAccounts">Bank Accounts</option>
-            <option value="annuities">Annuities</option>
-            <option value="moniesOwed">Money Owed</option>
-            <option value="cash">Cash</option>
-          </select>
-        </label>
-        <label>Is this asset taxable?
-          <input type="checkbox" id="liquidTaxable">
-        </label>
-        <label>Purchase Value
-          <input type="text" id="purchaseValue"
-        </label>
+        <button class="button moreDetails" data-opens="liquid-assets__wrapper">More Details</button>
+        <div class="liquid-assets__wrapper">
+          <div class="liquid-asset" id="liquidAsset1">
+            <label>Asset Type
+              <select class="asset__type">
+                <option value="investmentAccounts">Investment Accounts</option>
+                <option value="bankAccounts">Bank Accounts</option>
+                <option value="annuities">Annuities</option>
+                <option value="moniesOwed">Money Owed</option>
+                <option value="cash">Cash</option>
+              </select>
+            </label>
+            <label>Estimated Total Asset Worth
+              <input type="text" class="asset__worth" />
+            </label>
+            <button class="button moreDetails" data-opens="liquid-asset__details__wrapper">More Details</button>
+            <div class="liquid-asset__details__wrapper">
+              <label>Is this asset taxable?
+                <input type="checkbox" class="taxable">
+              </label>
+              <label>Purchase Value
+                <input type="text" class="purchaseValue" />
+              </label>
+              <label>Current Balance
+                <input type="text" class="currentBalance" />
+              </label>
+              <label>APR (Interest Rate)
+                <input type="text" class="apr" />
+              </label>
+            </div>
+          </div>
+        </div>
+        <button class="button addNew" data-addNew="liquid-asset">Add Another Asset</button>
       </div>
+
+
       <hr />
+
+
       <div class="small-12 columns">
-        <label>Non-liquid Assets
+        <h4>Non-Liquid Assets</h4>
+        <label>Total Non-Liquid Assets
           <input type="text" id="nonLiquidAssets" />
         </label>
+        <button class="button moreDetails" data-opens="non-liquid-assets__wrapper">More Details</button>
+        <div class="non-liquid-assets__wrapper">
+          <div class="non-liquid-asset" id="nonLiquidAsset1">
+            <label>Asset Type
+              <select class="asset__type">
+                <option value="realEstate">Real Estate</option>
+                <option value="cars">Cars</option>
+                <option value="jewelery">Jewelery</option>
+                <option value="preciousMetals">Precious Metals</option>
+                <option value="paintings">Paintings</option>
+                <option value="business">Business</option>
+              </select>
+            </label>
+            <label>Estimated Total Asset Worth
+              <input type="text" class="asset__worth" />
+            </label>
+            <button class="button moreDetails" data-opens="non-liquid-asset__details__wrapper">More Details</button>
+            <div class="non-liquid-asset__details__wrapper">
+              <label>Is this asset insured?
+                <input type="checkbox" class="insured">
+              </label>
+              <label>Purchase Value
+                <input type="text" class="purchaseValue" />
+              </label>
+              <label>Current Value
+                <input type="text" class="currentBalance" />
+              </label>
+            </div>
+          </div>
+        </div>
+        <button class="button addNew" data-addNew="non-liquid-asset">Add Another Asset</button>
       </div>
+
+
       <hr />
+
+
       <div class="small-12 columns">
-        <label>Family
-          <input type="text" id="family" />
-        </label>
+        <h4>Family</h4>
+        <button class="button" id="addFamily">Add Member</button>
+        <div class="family">
+          <div class="member" id="familyMember1">
+            <label>Name
+              <input type="text"/>
+            </label>
+            <label>Birthday
+              <input type="text" placeholder="08"/>
+              <input type="text" placeholder="14"/>
+              <input type="text" placeholder="'92"/>
+            </label>
+            <label>Address
+              <input type="text" placeholder="Street"/>
+              <input type="text" placeholder="City"/>
+              <input type="text" placeholder="State"/>
+              <input type="text" placeholder="Zip"/>
+            </label>
+            <label>Tax Filing Status
+              <select id="taxFilingStatus1">
+                <option>Single</option>
+                <option>Head of Household</option>
+                <option>Married</option>
+                <option>Widowed</option>
+                <option>Child Support</option>
+              </select>
+            </label>
+            <label>Tax Filing Type
+              <select id="taxFilingType1">
+                <option>Standard</option>
+                <option>Itemized</option>
+              </select>
+            </label>
+            <label>Employment Status
+              <select id="employmentStatus1">
+                <option>None</option>
+                <option>Part Time</option>
+                <option>Full Time</option>
+                <option>Retired</option>
+                <option>Semi-Retired</option>
+                <option>Dependent</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <button class="button addNew" data-addNew="member">Add Another Asset</button>
       </div>
     </form>
   </div>
