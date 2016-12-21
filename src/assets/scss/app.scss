@@ -90,13 +90,48 @@
   width: 75%;
   max-width: 960px;
   margin: 100px auto;
+  background: $white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 
 
   .stanceapp-form__header {
+    background: #7CBBDC;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
 
+    span, h2 {
+      color: $white;
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: bold;
+    }
   }
 
   .stanceapp-form__form {
+    padding: 50px;
 
+    label {
+      color: #C2C2C2;
+    }
+
+    input, select {
+      background: #fafafa;
+      border-radius: 10px;
+    }
+
+    a {
+      background: $success-color;
+      border-radius: 1000px;
+    }
+
+    .switch {
+      width: 50px;
+      height: 20px;
+      border-radius: 1000px;
+    }
   }
 }

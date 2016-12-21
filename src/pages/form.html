@@ -4,7 +4,7 @@
     <h2>Help us, help you.</h2>
     <span class="x-close"></span>
   </div>
-  <div class="stanceapp-form__form">
+  <div class="stanceapp-form__form row">
     <form role="form">
 
       <!-- User Info -->
@@ -39,7 +39,6 @@
         </label>
       </div>
 
-
       <hr />
 
       <!-- Income Info -->
@@ -50,16 +49,11 @@
         </label>
 
         <!-- Opens adjacent '__wrapper' -->
-        <button class="button moreDetails" data-opens="income__wrapper">More Details</button>
+        <a class="button moreDetails" data-opens="income__wrapper">More Details</a>
 
         <!-- Wrapper for individual 'income' objects -->
         <div class="income__wrapper">
 
-          <!--
-          Income Object -
-            1. Income Type
-            2. Estimated Total
-          -->
           <div class="income" id="income_1">
             <label>Income Type
               <select class="income__type">
@@ -78,39 +72,13 @@
               <input type="text" class="income__total"/>
             </label>
           </div>
-          <!-- end object -->
-
-          <!--
-          <div class="income" id="income_2">
-            <label>Income Type
-              <select class="income__type">
-                <option value="employmentIncome">Employment Income</option>
-                <option value="nonEmploymentIncome">Non-employment Income</option>
-                <option value="investmentIncome">Investment Income</option>
-                <option value="rentIncome">Rent Income</option>
-                <option value="hobbyIncome">Hobby Income</option>
-                <option value="selfEmploymentIncome">Self-employment Income</option>
-                <option value="socialSecurity">Social Security</option>
-                <option value="alimony">Alimony</option>
-                <option value="federalSupport">Federal Support</option>
-              </select>
-            </label>
-            <label>Total Esitmated Income
-              <input type="text" class="income__total"/>
-            </label>
-          </div>
-          -->
-          <!-- and so on... -->
 
         </div>
 
         <!-- Generate new Income Object into '__wrapper' above -->
-        <button class="button addNew" data-addNew="income">Add Another Income</button>
+        <a class="button addNew" data-addNew="income">Add Another Income</a>
 
       </div>
-
-
-      <hr />
 
       <!-- Expense Info -->
       <div class="small-12 columns">
@@ -122,7 +90,7 @@
           <input type="text" id="yearlyExpenses" />
         </label>
 
-        <button class="button moreDetails" data-opens="expenses__wrapper">More Details</button>
+        <a class="button moreDetails" data-opens="expenses__wrapper">More Details</a>
 
         <div class="expenses__wrapper">
 
@@ -131,7 +99,7 @@
             <label>Estimated Household
               <input type="text" id="householdTotal" />
             </label>
-            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
+            <a class="button moreDetails" data-opens="expense__details__wrapper">More Details</a>
             <div class="expense__details__wrapper">
               <label>Utilities
                 <input type="text" id="household_utilities"/>
@@ -158,7 +126,7 @@
             <label>Estimated Living
               <input type="text" id="livingTotal" />
             </label>
-            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
+            <a class="button moreDetails" data-opens="expense__details__wrapper">More Details</a>
             <div class="expense__details__wrapper">
               <label>Groceries
                 <input type="text" id="living_groceries"/>
@@ -197,7 +165,7 @@
             <label>Estimated Shopping
               <input type="text" id="shoppingTotal" />
             </label>
-            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
+            <a class="button moreDetails" data-opens="expense__details__wrapper">More Details</a>
             <div class="expense__details__wrapper">
               <label>Clothing
                 <input type="text" id="shopping_clothing"/>
@@ -242,7 +210,7 @@
             <label>Estimated Auto
               <input type="text" id="autoTotal" />
             </label>
-            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
+            <a class="button moreDetails" data-opens="expense__details__wrapper">More Details</a>
             <div class="expense__details__wrapper">
               <label>Insurance
                 <input type="text" id="auto_insurance"/>
@@ -269,7 +237,7 @@
             <label>Estimated Legal
               <input type="text" id="legalTotal" />
             </label>
-            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
+            <a class="button moreDetails" data-opens="expense__details__wrapper">More Details</a>
             <div class="expense__details__wrapper">
               <label>Alimony
                 <input type="text" id="legal_alimony" />
@@ -287,7 +255,7 @@
             <label>Estimated Professional Services
               <input type="text" id="professionalServicesTotal" />
             </label>
-            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
+            <a class="button moreDetails" data-opens="expense__details__wrapper">More Details</a>
             <div class="expense__details__wrapper">
               <label>Legal
                 <input type="text" id="professionalServices_legal"/>
@@ -305,7 +273,7 @@
             <label>Estimated Medical
               <input type="text" id="medicalTotal" />
             </label>
-            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
+            <a class="button moreDetails" data-opens="expense__details__wrapper">More Details</a>
             <div class="expense__details__wrapper">
               <label>Doctor
                 <input type="text" id="medical_doctor"/>
@@ -344,7 +312,7 @@
           <input type="text" id="debt" />
         </label>
 
-        <button class="button moreDetails" data-opens="debt__wrapper">More Details</button>
+        <a class="button moreDetails" data-opens="debt__wrapper">More Details</a>
 
         <div class="debt__wrapper">
 
@@ -365,7 +333,7 @@
               <input type="text" class="debt__total" />
             </label>
 
-            <button class="button moreDetails" data-opens="debt__details__wrapper">More Details</button>
+            <a class="button moreDetails" data-opens="debt__details__wrapper">More Details</a>
 
             <div class="debt__details__wrapper">
 
@@ -414,7 +382,7 @@
 
           </div>
 
-          <button class="button addNew" data-addNew="debt">I have another source of debt.</button>
+          <a class="button addNew" data-addNew="debt">I have another source of debt.</a>
 
         </div>
       </div>
@@ -428,7 +396,7 @@
         <label>Total Liquid Assets
           <input type="text" id="liquidAssets" />
         </label>
-        <button class="button moreDetails" data-opens="liquid-assets__wrapper">More Details</button>
+        <a class="button moreDetails" data-opens="liquid-assets__wrapper">More Details</a>
         <div class="liquid-assets__wrapper">
           <div class="liquid-asset" id="liquidAsset1">
             <label>Asset Type
@@ -443,7 +411,7 @@
             <label>Estimated Total Asset Worth
               <input type="text" class="asset__worth" />
             </label>
-            <button class="button moreDetails" data-opens="liquid-asset__details__wrapper">More Details</button>
+            <a class="button moreDetails" data-opens="liquid-asset__details__wrapper">More Details</a>
             <div class="liquid-asset__details__wrapper">
               <label>Is this asset taxable?
                 <input type="checkbox" class="taxable">
@@ -460,7 +428,7 @@
             </div>
           </div>
         </div>
-        <button class="button addNew" data-addNew="liquid-asset">Add Another Asset</button>
+        <a class="button addNew" data-addNew="liquid-asset">Add Another Asset</a>
       </div>
 
 
@@ -472,7 +440,7 @@
         <label>Total Non-Liquid Assets
           <input type="text" id="nonLiquidAssets" />
         </label>
-        <button class="button moreDetails" data-opens="non-liquid-assets__wrapper">More Details</button>
+        <a class="button moreDetails" data-opens="non-liquid-assets__wrapper">More Details</a>
         <div class="non-liquid-assets__wrapper">
           <div class="non-liquid-asset" id="nonLiquidAsset1">
             <label>Asset Type
@@ -488,7 +456,7 @@
             <label>Estimated Total Asset Worth
               <input type="text" class="asset__worth" />
             </label>
-            <button class="button moreDetails" data-opens="non-liquid-asset__details__wrapper">More Details</button>
+            <a class="button moreDetails" data-opens="non-liquid-asset__details__wrapper">More Details</a>
             <div class="non-liquid-asset__details__wrapper">
               <label>Is this asset insured?
                 <input type="checkbox" class="insured">
@@ -502,7 +470,7 @@
             </div>
           </div>
         </div>
-        <button class="button addNew" data-addNew="non-liquid-asset">Add Another Asset</button>
+        <a class="button addNew" data-addNew="non-liquid-asset">Add Another Asset</a>
       </div>
 
 
@@ -511,7 +479,7 @@
 
       <div class="small-12 columns">
         <h4>Family</h4>
-        <button class="button" id="addFamily">Add Member</button>
+        <a class="button" id="addFamily">Add Member</a>
         <div class="family">
           <div class="member" id="familyMember1">
             <label>Name
@@ -555,7 +523,7 @@
             </label>
           </div>
         </div>
-        <button class="button addNew" data-addNew="member">Add Another Asset</button>
+        <a class="button addNew" data-addNew="member">Add Another Asset</a>
       </div>
     </form>
   </div>
