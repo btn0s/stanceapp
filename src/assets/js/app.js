@@ -1,5 +1,5 @@
 
-app = {
+var app = {
 
     data : {},
 

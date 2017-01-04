@@ -137,6 +137,145 @@
 }
 
 .button {
-  background: none;
+  // background: none;
   border-radius: 1000px;
+}
+
+// .background {
+//   &--image {
+//     background-image: url('../img/home_background.png');
+//     background-size: cover;
+//   }
+// }
+
+section {
+  padding: 100px 0px;
+
+  .container {
+    max-width: 590px;
+  }
+}
+
+#EDEA {
+  &__home-nav {
+    margin-top: 25px;
+    background: none;
+
+    * {
+      background: none;
+      vertical-align: middle;
+    }
+
+    .menu {
+      li {
+        a {
+          color: $white;
+        }
+
+        &:last-of-type {
+          a {
+            color: #47ffb8;
+          }
+        }
+      }
+    }
+
+    img {
+      height: 30px;
+    }
+  }
+
+  &__home-top {
+    padding-top: 50px;
+    padding-bottom: 300px;
+    background-image: url('../img/home-top__background.png');
+    background-position: bottom;
+    background-size: cover;
+
+    .button {
+      border-color: $white;
+      background: none;
+
+      &:hover {
+        background: #33485D;
+        border-color: rgba(0,0,0,0);
+      }
+    }
+  }
+
+  &__home-middle {
+    padding-bottom: 250px;
+    background-image: url('../img/home-middle__background.png');
+    background-position: top;
+    background-size: cover;
+  }
+
+  &__home-bottom {
+    background-color: #eb6b69;
+
+    .card {
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      img.icon {
+        width: 100px;
+        margin-bottom: 50px;
+      }
+
+      p {
+        padding: 0 20px;
+        margin-bottom: 50px;
+      }
+    }
+
+
+  }
+  &__home-footer{
+    background-color: #2a547a;
+
+    .container {
+      padding-top: 50px;
+      padding-bottom: 0;
+    }
+
+    .menu {
+      li {
+        display: inline-block;
+        margin: 0 auto;
+
+        a {
+          color: $white;
+        }
+      }
+    }
+
+    .credits {
+      margin-bottom: 25px;
+      img {
+        width: 250px;
+      }
+    }
+
+    .footer-nav {
+      margin-bottom: 25px;
+    }
+
+    .social {
+      background: $white;
+      display: block;
+      margin: 0 auto;
+      max-width: 600px;
+      border-top-right-radius: 100px;
+      border-top-left-radius: 100px;
+      padding: 20px;
+
+      .menu {
+        li {
+          a {
+            color: $dark-gray;
+          }
+        }
+      }
+    }
+  }
 }
