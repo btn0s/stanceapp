@@ -1,0 +1,183 @@
+{{> navigation_dashboard}}
+
+<div class="row">
+    <div class="large-12 columns stanceapp-2d">
+      
+       <!--trends module-->
+       <div class="row">
+            <div class="large-12 columns stanceapp-2d__dashboard__overall">
+              
+              <!--trends header-->
+               <div class="row stanceapp-2d__dashboard__header">
+                   <div class="large-6 columns medium-6 columns">
+                       <h5>Trends</h5>
+                   </div>
+                   <div class="large-6 columns">
+                       <h5 style="float: right;">Share icon</h5>
+                   </div>
+                </div>
+                
+                <hr></hr>
+                
+                <div class="row" style="text-align: center;">
+                    <div class="large-2 columns large-offset-1 medium-3 columns">
+                        <p>Stance score</p>
+                        <p style="color: #4E7E9F;">&#9679;</p>
+                    </div>
+                    <div class="large-3 columns medium-3 columns">
+                        <p>Obligations</p>
+                        <p style="color: #F68482;">&#9679;</p>
+                    </div>
+                    <div class="large-3 columns medium-3 columns">
+                        <p>Wealth</p>
+                        <p style="color: #57D49E;">&#9679;</p>
+                    </div>
+                    <div class="large-2 columns medium-3 columns">
+                        <p>Budget</p>
+                        <p style="color: #7DBADC;">&#9679;</p>
+                    </div>
+                </div>
+               
+                <canvas class="stanceapp-2d__canvas" id="overallCanvas" width="740" height="200"></canvas>
+               
+            </div>
+       </div>
+       
+       <!-- stats module-->
+       <div class="row">
+            <div class="large-12 columns stanceapp-2d__dashboard__overall">
+                
+                <div class="row stanceapp-2d__stats">
+                    <div class="large-3 columns medium-3 columns stanceapp-2d__stats__container">
+                        <h5 id="accuracyScore">20%</h5>
+                        <p>Accuracy</p>
+                    </div>
+                    <div class="large-3 columns medium-3 columns stanceapp-2d__stats__container">
+                        <h5 id="meansScore">6/10</h5>
+                        <p>Means monitor</p>
+                        <p style="color: #F68482;">&#9679;</p>
+                    </div>
+                    <div class="large-3 columns medium-3 columns stanceapp-2d__stats__container">
+                        <h5 id="nmrScore">7%</h5>
+                        <p>Net money growth rate</p>
+                        <p style="color: #57D49E;">&#9679;</p>
+                    </div>
+                    <div class="large-3 columns medium-3 columns">
+                        <h5 id="savingScore">5%</h5>
+                        <p>Savings rate</p>
+                    </div>
+                </div>
+               
+            </div>
+       </div>
+       
+       <!-- Pie-charts module-->
+       <div class="row">
+            <div class="large-12 columns stanceapp-2d__dashboard__overall">
+              
+               <!--compositions header-->
+               <div class="row stanceapp-2d__dashboard__header">
+                   <div class="large-6 columns medium-6 columns">
+                       <h5>Compositions</h5>
+                   </div>
+                   <div class="large-6 columns">
+                       <h5 style="float: right;">Share icon</h5>
+                   </div>
+                </div>
+                
+                <hr></hr>
+                
+                <div class="row" style="text-align: center;">
+                    <div class="large-4 columns medium-3 columns">
+                        <p>Stance score</p>
+                        <canvas id="pieCanvas_stanceScore" width="200" height="200"></canvas>
+                    </div>
+                    <div class="large-4 columns medium-3 columns">
+                        <p>Obligations</p>
+                        <canvas id="pieCanvas_obligationScore" width="200" height="200"></canvas>
+                    </div>
+                    <div class="large-4 columns medium-3 columns">
+                        <p>Wealth</p>
+                        <canvas id="pieCanvas_wealthScore" width="200" height="200"></canvas>
+                    </div>
+                </div>
+               
+            </div>
+       </div>
+       
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+
+<script>
+    var ctx = document.getElementById('overallCanvas').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Obligations',
+          data: [710, 800,640, 730, 780, 740, 720],
+          backgroundColor: "rgba(246,132,130,0.4)"
+        }, {
+          label: 'Budget',
+          data: [666, 345, 500, 568, 872, 637, 710],
+          backgroundColor: "rgba(86,170,212,0.4)"
+        }]
+      }
+    });
+    
+    var ctx = document.getElementById('pieCanvas_stanceScore').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ["Income", "Expenses", "Obligations", "NMGR"],
+        datasets: [{
+          backgroundColor: [
+            "#2ecc71",
+            "#3498db",
+            "#95a5a6",
+            "#9b59b6"
+          ],
+          data: [12, 19, 3, 17]
+        }]
+      }
+    });
+    
+    var ctx = document.getElementById('pieCanvas_obligationScore').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ["Income", "Expenses", "Obligations", "NMGR"],
+        datasets: [{
+          backgroundColor: [
+            "#2ecc71",
+            "#3498db",
+            "#95a5a6",
+            "#9b59b6"
+          ],
+          data: [12, 19, 3, 17]
+        }]
+      }
+    });
+    
+    var ctx = document.getElementById('pieCanvas_wealthScore').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ["Income", "Expenses", "Obligations", "NMGR"],
+        datasets: [{
+          backgroundColor: [
+            "#2ecc71",
+            "#3498db",
+            "#95a5a6",
+            "#9b59b6"
+          ],
+          data: [12, 19, 3, 17]
+        }]
+      }
+    });
+
+</script>
