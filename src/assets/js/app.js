@@ -1,5 +1,5 @@
 
-app = {
+var app = {
 
     data : {},
 
@@ -24,6 +24,32 @@ app = {
         console.log(self.data);
     },
 
+    // Input flow user controls
+    controls : {
+      addNew : function() {
+          // Generate new HTML partial component into adjacent '__wrapper'
+          // for use when user has multiple income sources, family members, debt sources, expenses, etc
+          console.log("add new");
+      },
+
+      moreDetails : function(e) {
+          // Opens more detail for each section
+          var o = $(e).attr('data-opens');
+          $('.' + o).toggle();
+          console.log("more details", o);
+      },
+
+      nextSection : function() {
+          // loop forward through form sections, for use when 'continue' is clicked
+          console.log("continue");
+      },
+
+      lastSection : function() {
+          // loop backward through form sections, for use when 'continue' is clicked
+          console.log("back");
+      }
+    },
+
     bindActions : function() {
         var self = this;
         $('input, select, textarea').on('blur', function() {
@@ -34,12 +60,35 @@ app = {
         $('#submit').on('click', function() {
             self.saveData();
         });
+
+        $('#stanceapp-form__button--continue').on('click', function() {
+            self.saveData();
+            self.controls.nextSection();
+        });
+
+        $('#stanceapp-form__button--back').on('click', function() {
+            self.saveData();
+            self.controls.lastSection();
+        });
+
+        $('.moreDetails').on('click', function() {
+          var elem = $(this);
+            self.controls.moreDetails(elem);
+        });
+
+        $('.addNew').on('click', function() {
+            self.controls.addNew();
+        });
     }
 };
 
 $(document).ready(function() {
     app.bindActions();
+
+
 });
+
+
 
 
 // Function for string formatting. Use like

@@ -1,3 +1,5 @@
+{{> EDEA__home-nav}}
+
 <div class="stanceapp-form">
   <div class="stanceapp-form__header">
     <span>Phase 1</span>
@@ -8,7 +10,7 @@
     <form role="form">
 
       <!-- User Info -->
-      <div class="small-12 columns">
+      <div class="small-12 columns user-info">
         <label>First Name
           <input type="text" id="firstName" autofocus/>
         </label>
@@ -39,21 +41,27 @@
         </label>
       </div>
 
+
       <hr />
 
       <!-- Income Info -->
-      <div class="small-12 columns">
+      <div class="small-12 columns income-info">
         <h4>Income</h4>
         <label>Estimated Income
           <input type="text" id="income" />
         </label>
 
         <!-- Opens adjacent '__wrapper' -->
-        <a class="button moreDetails" data-opens="income__wrapper">More Details</a>
+        <button class="button moreDetails" data-opens="income__wrapper">More Details</button>
 
         <!-- Wrapper for individual 'income' objects -->
         <div class="income__wrapper">
 
+          <!--
+          Income Object -
+            1. Income Type
+            2. Estimated Total
+          -->
           <div class="income" id="income_1">
             <label>Income Type
               <select class="income__type">
@@ -72,16 +80,42 @@
               <input type="text" class="income__total"/>
             </label>
           </div>
+          <!-- end object -->
+
+          <!--
+          <div class="income" id="income_2">
+            <label>Income Type
+              <select class="income__type">
+                <option value="employmentIncome">Employment Income</option>
+                <option value="nonEmploymentIncome">Non-employment Income</option>
+                <option value="investmentIncome">Investment Income</option>
+                <option value="rentIncome">Rent Income</option>
+                <option value="hobbyIncome">Hobby Income</option>
+                <option value="selfEmploymentIncome">Self-employment Income</option>
+                <option value="socialSecurity">Social Security</option>
+                <option value="alimony">Alimony</option>
+                <option value="federalSupport">Federal Support</option>
+              </select>
+            </label>
+            <label>Total Esitmated Income
+              <input type="text" class="income__total"/>
+            </label>
+          </div>
+          -->
+          <!-- and so on... -->
 
         </div>
 
         <!-- Generate new Income Object into '__wrapper' above -->
-        <a class="button addNew" data-addNew="income">Add Another Income</a>
+        <button class="button addNew" data-addNew="income">Add Another Income</button>
 
       </div>
 
+
+      <hr />
+
       <!-- Expense Info -->
-      <div class="small-12 columns">
+      <div class="small-12 columns expense-info">
         <h4>Expenses</h4>
         <label>Total Expenses Per Month
           <input type="text" id="monthlyExpenses" />
@@ -90,7 +124,7 @@
           <input type="text" id="yearlyExpenses" />
         </label>
 
-        <a class="button moreDetails" data-opens="expenses__wrapper">More Details</a>
+        <button class="button moreDetails" data-opens="expenses__wrapper">More Details</button>
 
         <div class="expenses__wrapper">
 
@@ -99,7 +133,7 @@
             <label>Estimated Household
               <input type="text" id="householdTotal" />
             </label>
-            <a class="button moreDetails" data-opens="expense__details__wrapper">More Details</a>
+            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
             <div class="expense__details__wrapper">
               <label>Utilities
                 <input type="text" id="household_utilities"/>
@@ -126,7 +160,7 @@
             <label>Estimated Living
               <input type="text" id="livingTotal" />
             </label>
-            <a class="button moreDetails" data-opens="expense__details__wrapper">More Details</a>
+            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
             <div class="expense__details__wrapper">
               <label>Groceries
                 <input type="text" id="living_groceries"/>
@@ -165,7 +199,7 @@
             <label>Estimated Shopping
               <input type="text" id="shoppingTotal" />
             </label>
-            <a class="button moreDetails" data-opens="expense__details__wrapper">More Details</a>
+            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
             <div class="expense__details__wrapper">
               <label>Clothing
                 <input type="text" id="shopping_clothing"/>
@@ -210,7 +244,7 @@
             <label>Estimated Auto
               <input type="text" id="autoTotal" />
             </label>
-            <a class="button moreDetails" data-opens="expense__details__wrapper">More Details</a>
+            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
             <div class="expense__details__wrapper">
               <label>Insurance
                 <input type="text" id="auto_insurance"/>
@@ -237,7 +271,7 @@
             <label>Estimated Legal
               <input type="text" id="legalTotal" />
             </label>
-            <a class="button moreDetails" data-opens="expense__details__wrapper">More Details</a>
+            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
             <div class="expense__details__wrapper">
               <label>Alimony
                 <input type="text" id="legal_alimony" />
@@ -255,7 +289,7 @@
             <label>Estimated Professional Services
               <input type="text" id="professionalServicesTotal" />
             </label>
-            <a class="button moreDetails" data-opens="expense__details__wrapper">More Details</a>
+            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
             <div class="expense__details__wrapper">
               <label>Legal
                 <input type="text" id="professionalServices_legal"/>
@@ -273,7 +307,7 @@
             <label>Estimated Medical
               <input type="text" id="medicalTotal" />
             </label>
-            <a class="button moreDetails" data-opens="expense__details__wrapper">More Details</a>
+            <button class="button moreDetails" data-opens="expense__details__wrapper">More Details</button>
             <div class="expense__details__wrapper">
               <label>Doctor
                 <input type="text" id="medical_doctor"/>
@@ -303,7 +337,7 @@
       <hr />
 
 
-      <div class="small-12 columns">
+      <div class="small-12 columns debt-info">
         <h4>Debt</h4>
         <label>Are you in any form of debt?
           <input type="checkbox" id="inDebt"/>
@@ -312,7 +346,7 @@
           <input type="text" id="debt" />
         </label>
 
-        <a class="button moreDetails" data-opens="debt__wrapper">More Details</a>
+        <button class="button moreDetails" data-opens="debt__wrapper">More Details</button>
 
         <div class="debt__wrapper">
 
@@ -333,7 +367,7 @@
               <input type="text" class="debt__total" />
             </label>
 
-            <a class="button moreDetails" data-opens="debt__details__wrapper">More Details</a>
+            <button class="button moreDetails" data-opens="debt__details__wrapper">More Details</button>
 
             <div class="debt__details__wrapper">
 
@@ -382,7 +416,7 @@
 
           </div>
 
-          <a class="button addNew" data-addNew="debt">I have another source of debt.</a>
+          <button class="button addNew" data-addNew="debt">I have another source of debt.</button>
 
         </div>
       </div>
@@ -391,12 +425,12 @@
       <hr />
 
 
-      <div class="small-12 columns">
+      <div class="small-12 columns la-info">
         <h4>Liquid Assets</h4>
         <label>Total Liquid Assets
           <input type="text" id="liquidAssets" />
         </label>
-        <a class="button moreDetails" data-opens="liquid-assets__wrapper">More Details</a>
+        <button class="button moreDetails" data-opens="liquid-assets__wrapper">More Details</button>
         <div class="liquid-assets__wrapper">
           <div class="liquid-asset" id="liquidAsset1">
             <label>Asset Type
@@ -411,7 +445,7 @@
             <label>Estimated Total Asset Worth
               <input type="text" class="asset__worth" />
             </label>
-            <a class="button moreDetails" data-opens="liquid-asset__details__wrapper">More Details</a>
+            <button class="button moreDetails" data-opens="liquid-asset__details__wrapper">More Details</button>
             <div class="liquid-asset__details__wrapper">
               <label>Is this asset taxable?
                 <input type="checkbox" class="taxable">
@@ -428,19 +462,19 @@
             </div>
           </div>
         </div>
-        <a class="button addNew" data-addNew="liquid-asset">Add Another Asset</a>
+        <button class="button addNew" data-addNew="liquid-asset">Add Another Asset</button>
       </div>
 
 
       <hr />
 
 
-      <div class="small-12 columns">
+      <div class="small-12 columns nla-info">
         <h4>Non-Liquid Assets</h4>
         <label>Total Non-Liquid Assets
           <input type="text" id="nonLiquidAssets" />
         </label>
-        <a class="button moreDetails" data-opens="non-liquid-assets__wrapper">More Details</a>
+        <button class="button moreDetails" data-opens="non-liquid-assets__wrapper">More Details</button>
         <div class="non-liquid-assets__wrapper">
           <div class="non-liquid-asset" id="nonLiquidAsset1">
             <label>Asset Type
@@ -456,7 +490,7 @@
             <label>Estimated Total Asset Worth
               <input type="text" class="asset__worth" />
             </label>
-            <a class="button moreDetails" data-opens="non-liquid-asset__details__wrapper">More Details</a>
+            <button class="button moreDetails" data-opens="non-liquid-asset__details__wrapper">More Details</button>
             <div class="non-liquid-asset__details__wrapper">
               <label>Is this asset insured?
                 <input type="checkbox" class="insured">
@@ -470,16 +504,16 @@
             </div>
           </div>
         </div>
-        <a class="button addNew" data-addNew="non-liquid-asset">Add Another Asset</a>
+        <button class="button addNew" data-addNew="non-liquid-asset">Add Another Asset</button>
       </div>
 
 
       <hr />
 
 
-      <div class="small-12 columns">
+      <div class="small-12 columns family-info">
         <h4>Family</h4>
-        <a class="button" id="addFamily">Add Member</a>
+        <button class="button" id="addFamily">Add Member</button>
         <div class="family">
           <div class="member" id="familyMember1">
             <label>Name
@@ -523,7 +557,7 @@
             </label>
           </div>
         </div>
-        <a class="button addNew" data-addNew="member">Add Another Asset</a>
+        <button class="button addNew" data-addNew="member">Add Another Member</button>
       </div>
     </form>
   </div>
