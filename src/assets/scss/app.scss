@@ -85,77 +85,20 @@
   }
 }
 
-.stanceapp-form {
-  height: auto;
-  width: 75%;
-  max-width: 960px;
-  margin: 100px auto;
-  background: $white;
-  border-radius: 20px;
-
-
-  .stanceapp-form__header {
-    background: #7CBBDC;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    padding: 20px;
-
-    span, h2 {
-      color: $white;
-    }
-
-    h2 {
-      text-align: center;
-      font-weight: bold;
-    }
-  }
-
-  .stanceapp-form__form, .stanceapp-form__main {
-    padding: 50px;
-
-    label {
-      color: #C2C2C2;
-    }
-
-    input, select {
-      background: #fafafa;
-      border-radius: 10px;
-    }
-
-    a {
-      background: $success-color;
-      border-radius: 1000px;
-    }
-
-    .switch {
-      width: 50px;
-      height: 20px;
-      border-radius: 1000px;
-    }
-  }
-}
-
 .button {
   // background: none;
   border-radius: 1000px;
 }
 
-// .background {
-//   &--image {
-//     background-image: url('../img/home_background.png');
-//     background-size: cover;
-//   }
-// }
+#landing-page {
+  section {
+    padding: 100px 0px;
 
-section {
-  padding: 100px 0px;
-
-  .container {
-    max-width: 590px;
+    .container {
+      max-width: 590px;
+    }
   }
-}
 
-#EDEA {
   &__home-nav {
     margin-top: 25px;
     background: none;
@@ -185,8 +128,8 @@ section {
   }
 
   &__home-top {
-    padding-top: 50px;
-    padding-bottom: 300px;
+    padding-top: 50px !important;
+    padding-bottom: 300px !important;
     background-image: url('../img/home-top__background.png');
     background-position: bottom;
     background-size: cover;
@@ -274,6 +217,58 @@ section {
             color: $dark-gray;
           }
         }
+      }
+    }
+  }
+}
+
+#stanceapp {
+  .stanceapp-form {
+    height: auto;
+    width: 75%;
+    max-width: 960px;
+    margin: 100px auto;
+    background: $white;
+    border-radius: 20px;
+
+
+    .stanceapp-form__header {
+      background: #7CBBDC;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      padding: 20px;
+
+      span, h2 {
+        color: $white;
+      }
+
+      h2 {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+
+    .stanceapp-form__form, .stanceapp-form__main {
+      padding: 50px;
+
+      label {
+        color: #C2C2C2;
+      }
+
+      input, select {
+        background: #fafafa;
+        border-radius: 10px;
+      }
+
+      a {
+        background: $success-color;
+        border-radius: 1000px;
+      }
+
+      .switch {
+        width: 50px;
+        height: 20px;
+        border-radius: 1000px;
       }
     }
   }

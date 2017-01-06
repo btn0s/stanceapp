@@ -1,13 +1,43 @@
-{{> EDEA__home-nav}}
-
-<div class="stanceapp">
+<div id="stanceapp">
   <div class="stanceapp-form">
     <header class="stanceapp-form__header">
       <h2>Help us, help you.</h2>
       <span class="x-close"></span>
     </header>
-    <main class="stanceapp-form__main">
-
+    <main class="stanceapp-form__main text-center">
+      <form role="form" class="stanceapp-form__wrapper row text-left">
+        <section class="stanceapp-form__section user-info small-12 columns">
+          <label>First Name
+            <input type="text" id="firstName" autofocus/>
+          </label>
+          <label>Last Name
+            <input type="text" id="lastName"/>
+          </label>
+          <label class="small-6 columns">Age
+            <input type="text" id="age"/>
+          </label>
+          <label class="small-6 columns">Gender
+            <select id="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="nonBinary">Not Binary</option>
+            </select>
+          </label>
+          <label>Address
+            <input type="text" id="address"/>
+          </label>
+          <label class="small-4 columns">City
+            <input type="text" id="city" />
+          </label>
+          <label class="small-4 columns">State
+            <input type="text" id="state" />
+          </label>
+          <label class="small-4 columns">Zip
+            <input type="text" id="zip" />
+          </label>
+        </section>
+      </form>
+      <a href="#" class="button" id="stanceapp-form__button--continue">Continue</a>
     </main>
   </div>
 </div>
