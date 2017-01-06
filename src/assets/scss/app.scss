@@ -55,6 +55,7 @@
   margin-right: auto;
   margin-left: auto;
 }
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -85,53 +86,200 @@
   }
 }
 
-.stanceapp-form {
-  height: auto;
-  width: 75%;
-  max-width: 960px;
-  margin: 100px auto;
-  background: $white;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+.button {
+  border-radius: 1000px;
+}
 
+#landing-page {
+  section {
+    padding: 100px 0px;
 
-  .stanceapp-form__header {
-    background: #7CBBDC;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    padding: 20px;
-
-    span, h2 {
-      color: $white;
-    }
-
-    h2 {
-      text-align: center;
-      font-weight: bold;
+    .container {
+      max-width: 590px;
     }
   }
 
-  .stanceapp-form__form {
-    padding: 50px;
+  &__home-nav {
+    margin-top: 25px;
+    background: none;
 
-    label {
-      color: #C2C2C2;
+    * {
+      background: none;
+      vertical-align: middle;
     }
 
-    input, select {
-      background: #fafafa;
-      border-radius: 10px;
+    .menu {
+      li {
+        a {
+          color: $white;
+        }
+
+        &:last-of-type {
+          a {
+            color: #47ffb8;
+          }
+        }
+      }
     }
 
-    a {
-      background: $success-color;
-      border-radius: 1000px;
+    img {
+      height: 30px;
+    }
+  }
+
+  &__home-top {
+    padding-top: 50px !important;
+    padding-bottom: 300px !important;
+    background-image: url('../img/home-top__background.png');
+    background-position: bottom;
+    background-size: cover;
+
+    .button {
+      border-color: $white;
+      background: none;
+
+      &:hover {
+        background: #33485D;
+        border-color: rgba(0,0,0,0);
+      }
+    }
+  }
+
+  &__home-middle {
+    padding-bottom: 250px;
+    background-image: url('../img/home-middle__background.png');
+    background-position: top;
+    background-size: cover;
+  }
+
+  &__home-bottom {
+    background-color: #eb6b69;
+
+    .card {
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      img.icon {
+        width: 100px;
+        margin-bottom: 50px;
+      }
+
+      p {
+        padding: 0 20px;
+        margin-bottom: 50px;
+      }
     }
 
-    .switch {
-      width: 50px;
-      height: 20px;
-      border-radius: 1000px;
+
+  }
+  &__home-footer{
+    background-color: #2a547a;
+
+    .container {
+      padding-top: 50px;
+      padding-bottom: 0;
+    }
+
+    .menu {
+      li {
+        display: inline-block;
+        margin: 0 auto;
+
+        a {
+          color: $white;
+        }
+      }
+    }
+
+    .credits {
+      margin-bottom: 25px;
+      img {
+        width: 250px;
+      }
+    }
+
+    .footer-nav {
+      margin-bottom: 25px;
+    }
+
+    .social {
+      background: $white;
+      display: block;
+      margin: 0 auto;
+      max-width: 600px;
+      border-top-right-radius: 100px;
+      border-top-left-radius: 100px;
+      padding: 20px;
+
+      .menu {
+        li {
+          a {
+            color: $dark-gray;
+          }
+        }
+      }
+    }
+  }
+}
+
+#stanceapp {
+  background: #fafafa;
+  padding: 100px 0;
+
+  .stanceapp-form {
+    height: auto;
+    width: 75%;
+    max-width: 960px;
+    margin: 0px auto;
+    background: $white;
+    border-radius: 20px;
+
+
+    .stanceapp-form__header {
+      background: #7CBBDC;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      padding: 20px;
+
+      span, h2 {
+        color: $white;
+      }
+
+      h2 {
+        text-align: center;
+        font-weight: bold;
+      }
+    }
+
+    .stanceapp-form__main {
+      padding: 50px;
+
+      h4 {
+        color: $primary-color;
+      }
+
+      label {
+        color: #C2C2C2;
+      }
+
+      input, select {
+        background: #fafafa;
+        border-radius: 10px;
+      }
+
+      .switch {
+        width: 50px;
+        height: 20px;
+        border-radius: 1000px;
+      }
+
+      div[class$="__wrapper"] {
+        display: none;
+
+        &.is-active {
+          display: block;
+        }
+      }
     }
   }
 }
