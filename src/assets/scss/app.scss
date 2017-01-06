@@ -91,8 +91,7 @@
   max-width: 960px;
   margin: 100px auto;
   background: $white;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
 
 
   .stanceapp-form__header {
@@ -111,7 +110,7 @@
     }
   }
 
-  .stanceapp-form__form {
+  .stanceapp-form__form, .stanceapp-form__main {
     padding: 50px;
 
     label {
