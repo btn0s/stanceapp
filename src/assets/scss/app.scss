@@ -55,6 +55,7 @@
   margin-right: auto;
   margin-left: auto;
 }
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -86,7 +87,6 @@
 }
 
 .button {
-  // background: none;
   border-radius: 1000px;
 }
 
@@ -223,11 +223,14 @@
 }
 
 #stanceapp {
+  background: #fafafa;
+  padding: 100px 0;
+
   .stanceapp-form {
     height: auto;
     width: 75%;
     max-width: 960px;
-    margin: 100px auto;
+    margin: 0px auto;
     background: $white;
     border-radius: 20px;
 
@@ -248,8 +251,12 @@
       }
     }
 
-    .stanceapp-form__form, .stanceapp-form__main {
+    .stanceapp-form__main {
       padding: 50px;
+
+      h4 {
+        color: $primary-color;
+      }
 
       label {
         color: #C2C2C2;
@@ -260,15 +267,18 @@
         border-radius: 10px;
       }
 
-      a {
-        background: $success-color;
-        border-radius: 1000px;
-      }
-
       .switch {
         width: 50px;
         height: 20px;
         border-radius: 1000px;
+      }
+
+      div[class$="__wrapper"] {
+        display: none;
+
+        &.is-active {
+          display: block;
+        }
       }
     }
   }
