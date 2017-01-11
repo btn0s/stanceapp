@@ -283,3 +283,68 @@
     }
   }
 }
+
+.stanceapp-2d {
+    margin-top: 5%;
+
+    .stanceapp-2d__overall_canvas {
+        display: block;
+        margin: auto;
+        background-image: url(img/stanceapp-2d_graph_bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .stanceapp-2d__stance_canvas {
+        display: block;
+        margin: auto;
+        background-image: url(img/stanceapp-2d_graph_bg.png);
+        background-repeat: no-repeat;
+        padding-right: 20px;
+    }
+
+    .stanceapp-2d__dashboard__stance {
+        border-style: solid;
+        border-width: thin;
+        border-radius: 20px;
+        border-color: #4a4a4a;
+        display: block;
+        margin-top: 2%;
+        margin-bottom: 2%;
+
+        .healthscore {
+            padding: 40px;
+        }
+
+        .score {
+            font-size: 65pt;
+            text-align: center;
+            color: #F49C7B;
+        }
+    }
+
+    .stanceapp-2d__dashboard__overall {
+        border-style: solid;
+        border-width: thin;
+        border-radius: 20px;
+        border-color: #4a4a4a;
+        display: block;
+        margin-top: 2%;
+        margin-bottom: 2%;
+
+        h5 {
+            padding-top: 2%;
+            color: #87898C;
+        }
+    }
+
+    .stanceapp-2d__stats {
+        text-align: center;
+        padding: 2%;
+
+        .stanceapp-2d__stats__container {
+            border-right: solid;
+            border-width: thin;
+        }
+    }
+}
