@@ -1,0 +1,148 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDEA</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body>
+
+    <nav>
+        <div class="top-bar">
+         
+          <div class="top-bar-left">
+            <ul class="menu">
+              <li><a href="#"><i class="fi-list"></i> <span>Menu</span></a></li>
+            </ul>
+          </div>
+          
+          <div class="menu-centered">
+            <ul class="menu">
+              <li><a href="stance.html"><i class="fi-list"></i> <span>Stance</span></a></li>
+              <li><a href="overall.html"><i class="fi-list"></i> <span>Overall</span></a></li>
+            </ul>
+          </div>
+          
+          <div class="top-bar-right">
+            <ul class="menu">
+              <li><a href="#">Adjust</a></li>
+            </ul>
+          </div>
+          
+        </div>
+    </nav>
+    
+    
+    <div class="row">
+        <div class="large-12 columns stanceapp-2d">
+        
+            <div class="row">
+               
+                <div class="large-7 columns stanceapp-2d__stance_canvas">
+                    <canvas id="stanceCanvas" width="655" height="800" style=" border:1px solid #d3d3d3;">Your browser does not support the HTML5 canvas tag.</canvas>
+                </div>
+                   
+                <div class="large-4 columns large-offset-1 stanceapp-2d__dashboard__stance">
+                    <div>
+                        <h4 style="text-align: center;">Stance Report</h4>
+                    </div>
+                    <div class="healthscore">
+                        <p class="score">60</p>
+                    </div>
+    
+                    <div class="large-12 columns">
+                        <button class="button" data-open="retirement__wrapper">Retirement score</button>
+                        <button class="button" data-open="stance__wrapper">Stance score</button>
+                    </div>
+    
+                    <div id="retirement__wrapper">
+                       <div class="row">
+                            <div class="large-4 columns">
+                                <h5>Wealth</h5>
+                                <h5>Budget</h5>
+                                <h5>Obligations</h5>
+                            </div>
+                            <div class="large-4 columns">
+                                <p>imgtag</p>
+                                <p>imgtag</p>
+                                <p>imgtag</p>
+                            </div>
+                            <div class="large-4 columns">
+                                <h5>344</h5>
+                                <h5>831</h5>
+                                <h5>943</h5>
+                            </div>
+                       </div>
+                    </div>
+                    
+                    <div id="stance__wrapper">
+                        <div class="row">
+                            <div class="large-4 columns">
+                                <h5>Wealth</h5>
+                                <h5>Budget</h5>
+                                <h5>Obligations</h5>
+                            </div>
+                            <div class="large-4 columns">
+                                <p>imgtag</p>
+                                <p>imgtag</p>
+                                <p>imgtag</p>
+                            </div>
+                            <div class="large-4 columns">
+                                <h5>344</h5>
+                                <h5>831</h5>
+                                <h5>943</h5>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <h5 id="savingsRate">25%</h5>
+                            <p>Savings Rate</p>
+                        </div>
+                        <div class="large-4 columns">
+                            <h5 id="monthsReserve">2 months</h5>
+                            <p>Savings Reserve</p>
+                        </div>
+                        <div class="large-4 columns">
+                            <h5 id="NMGR">5%</h5>
+                            <p>NMGR</p>
+                        </div>
+                    </div>
+                    
+                    <button class="button" data-open="retirement__wrapper">Print</button>
+                    <button class="button" data-open="stance__wrapper">Share</button>
+                    
+                </div>
+                
+            </div>
+        
+        </div>
+    </div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+    
+    <script>
+        var ctx = document.getElementById('stanceCanvas').getContext('2d');
+        var myChart = new Chart(ctx, {
+          type: 'radar',
+          data: {
+            labels: ['Obligations', 'Budget', 'Wealth'],
+            datasets: [{
+              label: 'Obligations',
+              data: [-710, 800,2],
+              backgroundColor: "rgba(246,132,130,0.4)"
+            }]
+          }
+        });
+    </script>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
