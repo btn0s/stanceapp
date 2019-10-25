@@ -1,3 +1,6 @@
+## EDEA Stance App
+This repo was used for the design and development of the EDEA Stance app.
+
 # ZURB Template
 
 [![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)
